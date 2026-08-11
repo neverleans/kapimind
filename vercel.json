@@ -1,0 +1,19 @@
+# =============================================================================
+# Vercel project config — Frontend (Next.js)
+# =============================================================================
+# Root directory: apps/web
+# Build command: cd ../.. && pnpm install --frozen-lockfile && pnpm --filter web build
+# Output: .next
+# Install command: cd ../.. && pnpm install --frozen-lockfile
+#
+# Environment Variables (configure em Project Settings):
+#   DATABASE_URL           — Postgres (Railway Internal URL)
+#   DIRECT_URL             — Postgres direct
+#   NEXTAUTH_SECRET        — min 32 chars (generate com: openssl rand -hex 32)
+#   NEXTAUTH_URL           — https://seudominio.vercel.app
+#   NEXT_PUBLIC_API_URL    — https://api.seudominio.com (Railway)
+#   BRAPI_API_KEY          — sua chave brapi.dev
+#   ANTHROPIC_API_KEY      — opcional (fallback REVIEW se ausente)
+#   TELEGRAM_BOT_TOKEN     — opcional
+#   SENTRY_DSN             — opcional (opcional mas recomendado)
+#   APP_VERSION            — git sha ou tag

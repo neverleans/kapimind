@@ -1,0 +1,543 @@
+{
+  "books": [
+    {
+      "slug": "pai-rico-pai-pobre",
+      "title": "Pai Rico, Pai Pobre",
+      "author": "Robert Kiyosaki",
+      "year": 1997,
+      "category": "mentalidade",
+      "month": 1,
+      "color": "yellow",
+      "summary": "Parebola autobiografica sobre dois pais com mentalidades opostas sobre dinheiro. Conheca ativos vs passivos, IQ financeiro e a corrida dos ratos.",
+      "lessons": [
+        {
+          "title": "Licao 1: Os ricos nao trabalham por dinheiro",
+          "key": "Mindset > receita. O objetivo e fazer o dinheiro trabalhar para voce.",
+          "application": "Antes de investir, escreva: 'Por que eu quero dinheiro?' Se a resposta e 'pagar contas', voce ainda esta na corrida dos ratos."
+        },
+        {
+          "title": "Licao 2: A importancia da educacao financeira",
+          "key": "IQ financeiro = contabilidade + investimento + mercados + lei. Escolas nao ensinam.",
+          "application": "Reserve 30 min/dia para estudar financas. Sugestoes: Gustavo Cerbasi, Investidor Sardinha, Me Poupe."
+        },
+        {
+          "title": "Licao 3: Faca seu proprio negocio",
+          "key": "Mantenha o emprego, mas construa ativos paralelos. Mind your own business.",
+          "application": "Com R$ 600/mes, invista em ativos que pagam dividendos (ETFs, FIIs) e construa fontes paralelas."
+        },
+        {
+          "title": "Licao 4: Ativos vs Passivos",
+          "key": "Ativo coloca dinheiro no seu bolso. Passivo tira.",
+          "application": "Faca uma lista de tudo que voce possui. Quase tudo que a classe media chama de 'patrimonio' e passivo."
+        },
+        {
+          "title": "Licao 5: Pague-se primeiro",
+          "key": "Invista ANTES de pagar contas. A pressao te forca a criatividade.",
+          "application": "No dia do salario, transfira R$ 600 automaticamente. Sem essa regra, R$ 600 vira pizza."
+        },
+        {
+          "title": "Licao 6: Trabalhe para aprender, nao para ganhar",
+          "key": "Escolha empregos que desenvolvam habilidades vendaveis.",
+          "application": "Habilidades (comunicacao, vendas, programacao) tem ROI vitalicio. Priorize o aprendizado sobre o salario imediato."
+        },
+        {
+          "title": "Licao 7: Gerencie riscos em vez de evita-los",
+          "key": "'Jogar seguro' e o maior risco. Os ricos aprendem a gerenciar.",
+          "application": "Comece pequeno com ETFs diversificados (Tesouro Selic, IVVB11). Nao precisa começar com tudo."
+        },
+        {
+          "title": "Licao 8: Crie listas 'Eu quero' e 'Eu nao quero'",
+          "key": "Listas concretas dao motivacao emocional.",
+          "application": "Crie duas listas: o que voce quer e o que nunca quer. Cole na geladeira."
+        },
+        {
+          "title": "Licao 9: Invista em si mesmo primeiro",
+          "key": "Voce e seu maior ativo.",
+          "application": "Academia, terapia e cursos sao investimento, nao despesa."
+        },
+        {
+          "title": "Licao 10: Use a estrutura corporativa",
+          "key": "Os ricos usam empresas (LLCs, holdings) para pagar impostos DEPOIS.",
+          "application": "Quando tiver renda autonoma, abra CNPJ. Estude holding patrimonial para proteger o patrimonio familiar."
+        },
+        {
+          "title": "Licao 11: O poder dos impostos",
+          "key": "O jogo do dinheiro e jogado por regras - e os ricos dominam as fiscais.",
+          "application": "Estude isencao de IR em acoes (ate R$ 20.000/mes em vendas) e FIIs isentos."
+        },
+        {
+          "title": "Licao 12: Nao tenha medo de ser diferente",
+          "key": "Evitar o rotulo de 'esquisito' mantem a maioria presa em empregos que odeiam.",
+          "application": "Quando alguem rir do seu esforco de poupar R$ 600/mes, lembre-se: essas pessoas provavelmente ainda estarao na corrida dos ratos em 20 anos."
+        }
+      ],
+      "criticisms": [
+        "A historia dos 'dois pais' e amplamente considerada ficcional.",
+        "Rich Global LLC (empresa do Kiyosaki) faliu em 2012 - irônico para guru de financas.",
+        "Defesa polemica de Bitcoin e ouro vs visao de Buffett."
+      ]
+    },
+    {
+      "slug": "mente-milionaria",
+      "title": "Os Segredos da Mente Milionaria",
+      "author": "T. Harv Eker",
+      "year": 2005,
+      "category": "mentalidade",
+      "month": 1,
+      "color": "green",
+      "summary": "17 arquivos mentais que diferenciam ricos de pobres. Reprogramacao do 'software' financeiro herdado na infancia.",
+      "lessons": [
+        {
+          "title": "Licao 1: O arquivo mental financeiro vem da infancia",
+          "key": "Seu 'programa' subconsciente sobre dinheiro foi gravado pelos pais.",
+          "application": "Escreva as frases que ouvia dos seus pais sobre dinheiro. Essas frases sabotam seu progresso."
+        },
+        {
+          "title": "Licao 2: Voce dirige o onibus do dinheiro",
+          "key": "Voce e o motorista, nao passageiro.",
+          "application": "Faca orcamento mensal consciente. Antes de cada compra, pergunte: 'Isso e passageiro ou motorista decidindo?'"
+        },
+        {
+          "title": "Licao 3: Nao despreze os ricos",
+          "key": "Inveja dos ricos te impede de aprender com eles.",
+          "application": "Pare de seguir perfis que denigrem quem tem dinheiro. Siga investidores e educadores financeiros."
+        },
+        {
+          "title": "Licao 4: Pare de reclamar, comece a analisar",
+          "key": "Culpar governo, patrao, economia e postura de vitima.",
+          "application": "Quando quiser reclamar da economia, pegue o extrato bancario e analise seus proprios gastos."
+        },
+        {
+          "title": "Licao 5: Declaracoes superam afirmacoes",
+          "key": "Afirmacoes vagas tem pouco efeito. Declaracoes no presente reprogramam a identidade.",
+          "application": "Crie 5 declaracoes de identidade financeira, leia em voz alta 2x/dia."
+        },
+        {
+          "title": "Licao 6: Ricos pensam grande; pobres pensam pequeno",
+          "key": "O tamanho dos seus resultados e igual ao tamanho do seu pensamento.",
+          "application": "Multiplique suas metas por 10 e veja onde a mente trava. A dor revela seus limites mentais."
+        },
+        {
+          "title": "Licao 7: A riqueza vem de fazer o que os outros nao fazem",
+          "key": "Trabalho duro, persistencia e acoes desconfortaveis nao sao negociaveis.",
+          "application": "O desconfortavel hoje em investir em renda variavel quando todo mundo tem medo."
+        },
+        {
+          "title": "Licao 8: Foque no patrimonio liquido, nao na renda",
+          "key": "R$ 20.000/mes com gastos de R$ 20.000/mes nao constroi patrimonio.",
+          "application": "Em vez de comemorar aumento, comemore quando o patrimonio liquido subir."
+        },
+        {
+          "title": "Licao 9: Administre bem o dinheiro quando o tiver",
+          "key": "O habito de poupar, orcar e investir e o que mantem a riqueza crescendo.",
+          "application": "Pratique administrar R$ 600/mes como se fossem R$ 60.000. O habito e o mesmo."
+        },
+        {
+          "title": "Licao 10: Ricos escolhem ser pagos por resultados",
+          "key": "Constroem equity, negocios e propriedade em vez de trocar horas por reais.",
+          "application": "Mesmo CLT, monte um projeto paralelo com equity (afiliados, conteudo, SaaS)."
+        },
+        {
+          "title": "Licao 11: Diversifique fontes de renda",
+          "key": "Milionarios tem multiplas fontes de renda, nao apenas salario.",
+          "application": "Liste 3 fontes alternativas (dividendos, freelancing, aluguel). Escolha 1 para comecar em 90 dias."
+        },
+        {
+          "title": "Licao 12: 'Eu mereco ser rico'",
+          "key": "A maioria carrega culpa inconsciente sobre ganhar dinheiro.",
+          "application": "Toda noite, antes de dormir, diga: 'Eu mereco prosperidade e tenho espaco para ela.'"
+        }
+      ],
+      "criticisms": [
+        "Criticado como 'snake oil' e pseudociencia por Bankers Anonymous.",
+        "Vies de superviviencia: so cita quem deu certo.",
+        "Seminarios caros do ecossistema Eker extrapolam o conteudo do livro."
+      ]
+    },
+    {
+      "slug": "investidor-inteligente",
+      "title": "O Investidor Inteligente",
+      "author": "Benjamin Graham",
+      "year": 1949,
+      "category": "valor",
+      "month": 2,
+      "color": "blue",
+      "summary": "A biblia do value investing. Separa investimento de especulacao, define margem de seguranca e conceitua o Sr. Mercado.",
+      "lessons": [
+        {
+          "title": "Licao 1: Investimento != Especulacao",
+          "key": "Investimento e operacao que promete seguranca do principal e retorno adequado. Especulacao e o resto.",
+          "application": "Separe mentalmente suas compras. 80% investimento disciplinado, 20% 'dinheiro de estudo'."
+        },
+        {
+          "title": "Licao 2: Valor intrinseco vs preco de mercado",
+          "key": "Toda acao tem dois precos: o de mercado (grito) e o intrinseco (real).",
+          "application": "Antes de comprar VGHF11, calcule valor patrimonial, dividend yield sustentavel, vacancia historica."
+        },
+        {
+          "title": "Licao 3: Margem de seguranca",
+          "key": "Nunca pague o preco cheio. Compre com 30-50% de desconto.",
+          "application": "Calcule valor intrinseco conservador. Compre so entre 60-70% desse valor."
+        },
+        {
+          "title": "Licao 4: Sr. Mercado",
+          "key": "Ele esta a seu servico, nao o contrario. Aproveite a euforia para vender, a depressao para comprar.",
+          "application": "VGHF11 caiu 26%. Pergunte: mudou o ativo subjacente ou so o humor de quem vende?"
+        },
+        {
+          "title": "Licao 5: Investidor Defensivo vs Empreendedor",
+          "key": "Defensivo: index funds + blue chips, diversifica, minimo esforco. Empreendedor: barganhas, quer superar o mercado.",
+          "application": "Com R$ 600/mes e pouco tempo, voce e (provavelmente) um investidor defensivo."
+        },
+        {
+          "title": "Licao 6: Volatilidade e sua amiga, nao inimiga",
+          "key": "Ativos mais baratos tem menor risco, nao maior (o oposto do que o intuition diz).",
+          "application": "VGHF11 -26% pode ser boa compra. Examine duration da carteira e taxa de inadimplencia dos CRIs."
+        },
+        {
+          "title": "Licao 7: Diversificacao como companheira da margem",
+          "key": "Minimo 10-30 papeis (defensivo) ou 5-10 (empreendedor).",
+          "application": "Sua carteira deveria ter pelo menos 2-3 classes, 2-3 setores, 2-3 geografias."
+        },
+        {
+          "title": "Licao 8: Index Funds (Graham como precursor)",
+          "key": "A maioria dos investidores deveria usar fundos indexados de baixo custo.",
+          "application": "BOVA11, IVVB11, VOO tem taxas ~0,03-0,20%/ano. Fundos ativos BR cobram 2-3%."
+        },
+        {
+          "title": "Licao 9: Compre acoes como se fossem empresas inteiras",
+          "key": "Cada acao representa fracao de um negocio real. Pergunte: 'compraria a empresa toda por esse preco?'",
+          "application": "Antes de comprar VGHF11, imagine: voce comprou uma carteira de CRIs de R$ 1 milhao. Faria sentido?"
+        },
+        {
+          "title": "Licao 10: Ignore o Sr. Mercado no curto prazo",
+          "key": "No curto prazo, o mercado e uma urna. No longo prazo, e uma balanca.",
+          "application": "Revise a carteira trimestralmente, nao diariamente."
+        },
+        {
+          "title": "Licao 11: Disciplina emocional > inteligencia",
+          "key": "O principal problema do investidor - e seu pior inimigo - e ele mesmo.",
+          "application": "Escreva um Investment Policy Statement (IPS) de uma pagina. Releia antes de qualquer Trade."
+        },
+        {
+          "title": "Licao 12: Nao tente acertar o mercado",
+          "key": "Market timing e impossibilidade pratica e emocional para a maioria.",
+          "application": "Compras mensais fixas sao a melhor defesa. Quem esperou o 'momento certo' em 2009, 2020 e 2022 ainda esta esperando."
+        }
+      ],
+      "criticisms": [
+        "Escrito em 1949 - exemplos tecnicamente datados, mas principios seguem atuais.",
+        "Alguns filtros de Graham (como P/VP < 1.5) sao dificeis de aplicar em ambiente de juros negativos."
+      ]
+    },
+    {
+      "slug": "little-book-valuation",
+      "title": "The Little Book of Valuation",
+      "author": "Aswath Damodaran",
+      "year": 2011,
+      "category": "valuation",
+      "month": 3,
+      "color": "purple",
+      "summary": "Guia pratico de valuation para o investidor medio. DCF, margem de seguranca e adaptacao por ciclo de vida da empresa.",
+      "lessons": [
+        {
+          "title": "Licao 1: Toda valoracao conta uma historia",
+          "key": "DCF e consequencia, nao ponto de partida. Antes de preencher planilha, escreva a historia.",
+          "application": "Antes de comprar MXRF11 ou HGLG11, escreva 5 frases: o que a empresa faz, por que lucra, o que pode dar errado."
+        },
+        {
+          "title": "Licao 2: Todo modelo esta errado; alguns sao uteis",
+          "key": "DCF, multiplos e opcoes reais sao aproximacoes. O valor vem de variar inputs com responsabilidade.",
+          "application": "Construa a planilha com 3 cenarios: pessimista, base e otimista. Compre so se preco for menor que o pessimista."
+        },
+        {
+          "title": "Licao 3: Valor intrinseco e o unico conceito que importa",
+          "key": "Valor intrinseco = valor presente dos fluxos de caixa futuros esperados.",
+          "application": "Toda quarta-feira, pegue o ativo da sua watchlist e calcule o fluxo de caixa esperado."
+        },
+        {
+          "title": "Licao 4: Existem tres familias de DCF",
+          "key": "DDM (dividendos), FCFE (caixa para o acionista), FCFF (caixa para a firma, WACC).",
+          "application": "Para MXRF11/HGLG11/KNCR11, use DDM simplificado. Para PETR4/VALE3, FCFF + WACC."
+        },
+        {
+          "title": "Licao 5: Crescimento e risco sao gemeos",
+          "key": "1pp de mudanca no crescimento ou no custo de capital pode alterar o valor em 20-40%.",
+          "application": "Antes de comprar 'acao de crescimento', calcule ROIC. Se for menor que 12%, o crescimento nao esta criando valor."
+        },
+        {
+          "title": "Licao 6: Margin of Safety nao e uma percentagem mistica",
+          "key": "Damodaran usa 20-40% de margem conforme incerteza.",
+          "application": "Use 25% como padrao para empresas B3 com lucro positivo. 40% para 'boa demais no YouTube'."
+        },
+        {
+          "title": "Licao 7: Adapte o modelo a fase do ciclo de vida",
+          "key": "Young growth / Growth / Mature / Declining pedem modelos diferentes.",
+          "application": "MXRF11 e mature (caixa estavel, payout alto): DDM simplificado basta."
+        },
+        {
+          "title": "Licao 8: Setor financeiro exige um DCF proprio",
+          "key": "Para bancos e seguradoras, use P/VP e dividend yield sustentavel em vez de DCF cru.",
+          "application": "Para ITUB4, BBDC4, BBSE3, nao rode DCF. Use P/L entre 6x-10x e DY entre 6%-9%."
+        },
+        {
+          "title": "Licao 9: Commodities e ciclicas: use preco medio de ciclo",
+          "key": "Ignore o preco do barril/commodity do dia. Faca a media de 7 a 10 anos.",
+          "application": "Para VALE3 e PETR4, pense em 'qual e o preco justo do minerio/barril em uma decada?'"
+        },
+        {
+          "title": "Licao 10: Ativos intangiveis (SaaS, marcas) exigem capitalizar P&D",
+          "key": "Tratar P&D como despesa subestima Nubank, Totvs, etc.",
+          "application": "Para acoes de tecnologia/SaaS/fintechs B3, antes de descartar pelo P/L alto: rode a planilha de capitalizacao de P&D."
+        },
+        {
+          "title": "Licao 11: Valor relativo (multiplos) e o complemento, nao substituto",
+          "key": "So faz sentido usar P/L, EV/EBITDA, P/VP se a empresa for parecida com o peer.",
+          "application": "Para FIIs, o peer sao FIIs do mesmo segmento + dividend yield historico."
+        },
+        {
+          "title": "Licao 12: Planilhas prontas existem para todos os modelos",
+          "key": "Damodaran nao te cobra pela ferramenta. Baixe 3 (DDM, FCFF, Multiplos de equity).",
+          "application": "Use https://pages.stern.nyu.edu/~adamodar/New_Home_Page/spreadsh.htm"
+        }
+      ],
+      "criticisms": [
+        "Sem traducao oficial para portugues - ler em ingles.",
+        "Planilhas Excel antigas (formato 2003-2007), mas formulas transparentes."
+      ]
+    },
+    {
+      "slug": "manual-analise-tecnica",
+      "title": "Manual de Analise Tecnica",
+      "author": "Marcos Abe",
+      "year": 2009,
+      "category": "analise-tecnica",
+      "month": 4,
+      "color": "yellow",
+      "summary": "Referencia em PT-BR de analise tecnica adaptada para a B3. Teoria de Dow, candles, figuras, indicadores e gestao de capital.",
+      "lessons": [
+        {
+          "title": "Licao 1: As tres tendencias de Dow",
+          "key": "Primaria (1 ano+), secundaria (3 semanas-3 meses), terciaria (diaria). Defina horizonte antes de escolher timeframe.",
+          "application": "Nao tente adivinhar a primaria olhando so o 5 min."
+        },
+        {
+          "title": "Licao 2: Suportes e resistencias sao zonas, nao linhas",
+          "key": "Faixas onde a oferta/demanda previamente se inverteu. Volume, numero de toques e tempo determinam a forca.",
+          "application": "Defina stop mental em qualquer operacao. Sem stop, nao opera."
+        },
+        {
+          "title": "Licao 3: A tendencia e valida ate que o mercado diga o contrario",
+          "key": "Princípio 6 de Dow: a tendencia persiste ate reversao.",
+          "application": "Position-trade, swing-trade. NAO usar em lateralizacao profunda."
+        },
+        {
+          "title": "Licao 4: Candles isolados sao frageis",
+          "key": "Um martelo no meio de congestionamento e ruido. Precisam de contexto.",
+          "application": "Em correcao dentro de tendencia primaria de alta (compra) ou baixa (venda)."
+        },
+        {
+          "title": "Licao 5: Volume confirma, nao dirige",
+          "key": "Sem volume, rompimento de resistencia tem alta chance de falso breakout.",
+          "application": "Filtra falsos rompimentos em small caps B3."
+        },
+        {
+          "title": "Licao 6: Indicadores complementam, nao decidem",
+          "key": "MACD, BB, IFR, Estocastico, Fibonacci: cada um tem forca em um regime.",
+          "application": "Combine 1-2 indicadores com a leitura grafica principal. Stack de 5+ leva a paralisia por analise."
+        },
+        {
+          "title": "Licao 7: Figuras de continuidade e reversao",
+          "key": "Triangulos, retangulos, cunhas, bandeiras (continuidade). OCO, topos duplos, M/W (reversao).",
+          "application": "Apos identificacao de tendencia primaria. NAO usar em congestionamento profundo."
+        },
+        {
+          "title": "Licao 8: Stop e inegociavel",
+          "key": "Saida e protecao definem o P&L tanto quanto a entrada.",
+          "application": "Toda operacao. 'Stop largo demais' para evitar acionamento = ausencia de gestao."
+        },
+        {
+          "title": "Licao 9: Gestao de capital > acerto de sinal",
+          "key": "Mesmo com 50% de acerto, sizing correto gera lucro. Tamanho da posicao e funcao do risco maximo.",
+          "application": "Calcule risco em R$ antes de abrir qualquer posicao. 'All-in' em setup perfeito = heuristica da falencia."
+        },
+        {
+          "title": "Licao 10: Organization beats prediction",
+          "key": "Registre TUDO para tornar a operacao repetivel e auditavel.",
+          "application": "Diario de operacoes, plano de acao, lista de acompanhamento. 'No feeling' e a antitese."
+        }
+      ],
+      "criticisms": [
+        "Coberto apenas o que esta no sumario - Elliott Wave, Ichimoku e order book nao aparecem.",
+        "Exemplos do livro sao de 2009 - graficos podem estar datados."
+      ]
+    },
+    {
+      "slug": "warren-buffett-accounting",
+      "title": "Warren Buffett Accounting Book",
+      "author": "Stig Brodersen & Preston Pysh",
+      "year": 2014,
+      "category": "valuation",
+      "month": 5,
+      "color": "green",
+      "summary": "Como ler demonstracoes financeiras pelo metodo Buffett. 4 principios, filtros quantitativos durros e calculo de valor intrinseco.",
+      "lessons": [
+        {
+          "title": "Licao 1: Os 4 Principios do Value Investing",
+          "key": "Gestao vigilante, perspectiva de longo prazo, negocio estavel/compreensivel, preco de compra atrativo.",
+          "application": "Para cada holding: D/E < 0,5 + Current Ratio > 1,5 + ROE > 8% (10 anos) + Gestao alinhada. Quem falhar em 2+ = candidato a venda."
+        },
+        {
+          "title": "Licao 2: Income Statement e o ponto de partida",
+          "key": "Buffett comeca pela DRE porque ela revela o ganho de produtividade do capital.",
+          "application": "Baixe a DRE dos ultimos 5 anos. Buffett gosta de empresas com margem operacional > 15% e estavel."
+        },
+        {
+          "title": "Licao 3: Owner's Earnings > Lucro Contabil",
+          "key": "Fórmula: Net Income + Depreciacao/Amortizacao + Itens nao-caixa - CapEx de manutencao.",
+          "application": "Para TGMA3 ou PSSA3, pegue a DFC. Owner's Earnings < 50% do LL = sinal amarelo."
+        },
+        {
+          "title": "Licao 4: ROE consistente e o 'scorecard' do gestor",
+          "key": "Buffett quer ROE consistentemente acima de 8-15% por 10 anos. DuPont decomposition ajuda.",
+          "application": "Calcule ROE dos ultimos 5 anos. Se houver queda abrupta, investigue. ROE > 20% duvide."
+        },
+        {
+          "title": "Licao 5: Ativos leves > Ativos pesados",
+          "key": "Buffett prefere empresas com pouco PP&E em relacao a receita. Asset-light convertem mais receita em caixa.",
+          "application": "Compare TOTS3 (asset-light) vs PSSA3 (asset-heavy). Espere que TOTS3 tenha melhor FCF/Receita."
+        },
+        {
+          "title": "Licao 6: Margin of Safety (Margem de Seguranca)",
+          "key": "Nunca pague o valor intrinseco cheio. Compre com 30-50% de desconto.",
+          "application": "Use a planilha gratuita do Pysh. Para PSSA3, calcule IV. So compre se cotacao <= 70% do IV."
+        },
+        {
+          "title": "Licao 7: Intrinsic Value = DCF simplificado",
+          "key": "Projete 10 anos de FCF, aplique taxa de desconto (10% padrao), adicione valor terminal com crescimento perpetuo de 2-3%.",
+          "application": "Baixe o Warren Buffett DCF Intrinsic Value Calculator gratuito."
+        },
+        {
+          "title": "Licao 8: Acquirer's Multiple (EV/EBIT) como filtro rapido",
+          "key": "EV/EBIT < 10 historicamente sinaliza empresas baratas.",
+          "application": "Para cada holding, calcule EV/EBIT. < 8 e forte sinal de descontagem."
+        },
+        {
+          "title": "Licao 9: Estoicismo temporal: juros, inflacao e tempo",
+          "key": "Taxa de juros e como gravidade - sempre presente, puxa valuations para baixo quando sobe.",
+          "application": "Em ciclos de Selic alta (como 2022-2024 no Brasil), Buffett defende paciencia - espere multiplos comprimirem."
+        },
+        {
+          "title": "Licao 10: Lucro retido deve criar valor futuro",
+          "key": "Sustainable Growth Rate = ROE x Retention Ratio. Se a empresa retem lucro mas nao consegue reinvestir a ROIC > custo de capital, esta destruindo valor.",
+          "application": "Crescimento organico maximo de TGMA3 com ROE 18% e retem 70% = ~12,6% a.a."
+        },
+        {
+          "title": "Licao 11: Gestao: o fator humano",
+          "key": "Quatro indicadores: baixa dependencia de divida, reservas liquidas, historico de recompra, compensacao alinhada.",
+          "application": "Antes de comprar, baixe a ultima Carta do CEO. Tom defensivo-empatico vs arrogante."
+        },
+        {
+          "title": "Licao 12: Mr. Market e disciplina emocional",
+          "key": "O mercado e um maníaco depressivo que ora te oferece R$ 1 por algo que vale R$ 0,50, ora R$ 0,30 por algo que vale R$ 1.",
+          "application": "Apague o app da corretora do celular. Faça aportes automaticos mensais. Reveja carteira a cada 6 meses."
+        }
+      ],
+      "criticisms": [
+        "Self-published (CreateSpace) - nenhum filtro editorial tradicional.",
+        "Cobertura de 'Earnings Power vs Reported Earnings' e 'Adjusted EBIT' pode nao ser literal no livro."
+      ]
+    },
+    {
+      "slug": "random-walk",
+      "title": "A Random Walk Down Wall Street",
+      "author": "Burton Malkiel",
+      "year": 1973,
+      "category": "macro",
+      "month": 6,
+      "color": "blue",
+      "summary": "Argumento fundamental para index funds e Hipotese do Mercado Eficiente. 50 anos de dados provam que ~2/3 dos fundos ativos perdem para o indice.",
+      "lessons": [
+        {
+          "title": "Licao 1: Stock picking e um jogo de tolos",
+          "key": "2/3 dos fundos ativos sao superados por um fundo de indice amplo. Analise tecnica e fundamentalista falham apos custos.",
+          "application": "Compre IVVB11 (S&P 500 em reais, taxa ~0,03%) ou BOVA11 (Ibovespa) mensalmente por debito automatico."
+        },
+        {
+          "title": "Licao 2: Compre o palheiro, nao a agulha",
+          "key": "Procurar o proximo Warren Buffett e procurar agulha em palheiro. Compre o palheiro.",
+          "application": "Em vez de descobrir a proxima acao milagre, use 100% em IVVB11 ou divida 50/50 IVVB11 + BOVA11."
+        },
+        {
+          "title": "Licao 3: Custos destroem retornos a longo prazo",
+          "key": "Cada 1% de taxa anual custa ~25% do patrimonio em 30 anos.",
+          "application": "IVVB11 a 0,03% a.a. vence qualquer fundo ativo brasileiro. Nunca aceite taxa > 0,30%."
+        },
+        {
+          "title": "Licao 4: Tempo no mercado > Timing do mercado",
+          "key": "Voce precisa acertar DUAS vezes (quando sair e quando voltar), perde os melhores dias de alta.",
+          "application": "Configure debito automatico mensal e esqueca. Em 2024-2025, diversos investidores brasileiros que esperaram correcao perderam anos de alta."
+        },
+        {
+          "title": "Licao 5: O mercado e eficiente (na maioria das vezes)",
+          "key": "Hipotese do Mercado Eficiente: precos refletem toda informacao disponivel. Erros sao imprevisiveis.",
+          "application": "Nao confie em 'dicas quentes' de grupos de Telegram, YouTubers de day-trade ou relatorios de corretora."
+        },
+        {
+          "title": "Licao 6: Bolhas sao recorrentes e previsiveis em padrao",
+          "key": "Tulip Mania, South Sea, dot-com, 2008, memes 2021. Mesmo padrao: narrativa sedutora + entrada massiva de novatos + queda violenta.",
+          "application": "Quando todo mundo estiver falando de um ativo como 'o futuro' (cripto, NFTs, IA, imoveis), desconfie."
+        },
+        {
+          "title": "Licao 7: Sua psicologia e seu pior inimigo",
+          "key": "4 vieses: overconfidence, julgamento enviesado, herd mentality, loss aversion.",
+          "application": "Automatize investimentos. Nao verifique saldo diario. Quando cair 30%, continue comprando."
+        },
+        {
+          "title": "Licao 8: Diversificacao elimina risco especifico",
+          "key": "MPT (Markowitz): uma carteira diversificada pode ser MENOS arriscada que qualquer componente individual.",
+          "application": "Nao coloque 100% em uma acao. Use IVVB11 (500 empresas em um ETF)."
+        },
+        {
+          "title": "Licao 9: Life-cycle investing",
+          "key": "Subtraia sua idade de 120 para determinar % em acoes. Aos 30, 90% acoes.",
+          "application": "Aos 30 anos, alvo 90% acoes / 10% bonds. Aos 40, 80/20."
+        },
+        {
+          "title": "Licao 10: Comece cedo, invista regularmente",
+          "key": "Poder dos juros compostos e exponencial. R$ 600/mes a 10% ao ano por 30 anos = ~R$ 1,1 milhao.",
+          "application": "Configure hoje mesmo debito automatico de R$ 600/mes. Nao espere 'sobrar dinheiro'."
+        },
+        {
+          "title": "Licao 11: Investimento vs especulacao",
+          "key": "Investimento = analise solida + horizonte longo + retorno razoavelmente previsivel.",
+          "application": "Pergunte-se: 'Estou investindo com base em fundamentos ou apostando em momentum/rumor?'"
+        },
+        {
+          "title": "Licao 12: Conheca seu 'sleeping point'",
+          "key": "Sell down to your sleeping point (J.P. Morgan, citado por Malkiel). Se voce nao dorme quando o mercado cair 20%, reduza exposicao.",
+          "application": "Se em queda de 20% voce entra em panico, reduza acoes em favor de renda fixa."
+        },
+        {
+          "title": "Licao 13: Compre o que nao entende com cuidado",
+          "key": "Malkiel e cetico sobre ouro, criptomoedas, NFTs, colecionaveis. Sao mercados menos eficientes.",
+          "application": "Para o investidor de R$ 600/mes, ignore cripto, ouro, NFTs. Foque no simples: indice de acoes global + renda fixa brasileira."
+        },
+        {
+          "title": "Licao 14: Smart beta e factor investing nao vencem consistentemente",
+          "key": "Fama-French (1993): small-cap e value stocks historicamente superaram o CAPM. Mas a maioria nao consegue explorar.",
+          "application": "Fique com indexacao pura (IVVB11). 0,03% de taxa vence qualquer ETF de factor de 0,30%+."
+        },
+        {
+          "title": "Licao 15: Investir e mais arte que ciencia",
+          "key": "Voce, mais que o mercado ou a economia, e o fator mais importante.",
+          "application": "O 'segredo' e chato: investir todo mes, diversificar, manter taxa baixa, e nao vender no panico."
+        }
+      ],
+      "criticisms": [
+        "Críticos dizem que a HME e teoria (e nao prove empirica) - embora os dados SPIVA sustentem.",
+        "Conta pessoal do autor: Malkiel e CIO da Wealthfront (gestor), o que e conflito de interesse teorico."
+      ]
+    }
+  ]
+}

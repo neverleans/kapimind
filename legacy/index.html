@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador - Estratégia Aceleração Base 10</title>
+
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- JS Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="p-4 md:p-8 font-sans antialiased text-gray-100">
+
+    <div class="max-w-7xl mx-auto space-y-8">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-center pb-6 border-b border-gray-700">
+            <div>
+                <h1
+                    class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-purple to-brand-green">
+                    <i class="fas fa-rocket mr-2 text-brand-purple"></i> Simulador "Aceleração Base 10"
+                </h1>
+                <p class="text-gray-400 mt-2 text-sm">Fase 1: Multiplicação de Cotas (High Yield) -> Fase 2: Blindagem
+                    Patrimonial</p>
+            </div>
+            <div class="mt-4 md:mt-0 flex gap-3">
+                <a href="fii-explorer.html"
+                    class="bg-brand-purple hover:bg-purple-600 text-white px-6 py-2 rounded-full font-semibold transition-all shadow-lg hover:shadow-purple-500/30 flex items-center gap-2">
+                    <i class="fas fa-search-dollar"></i> Explorar FIIs
+                </a>
+                <a href="ir-helper.html"
+                    class="bg-brand-yellow hover:bg-yellow-500 text-gray-900 px-6 py-2 rounded-full font-semibold transition-all shadow-lg hover:shadow-yellow-500/30 flex items-center gap-2">
+                    <i class="fas fa-file-invoice-dollar"></i> Auxiliar IR
+                </a>
+                <button onclick="runSimulation()"
+                    class="bg-brand-green hover:bg-green-600 text-white px-6 py-2 rounded-full font-semibold transition-all shadow-lg hover:shadow-green-500/30">
+                    <i class="fas fa-sync-alt mr-2"></i> Recalcular
+                </button>
+            </div>
+        </header>
+
+        <!-- Interactive Control Panel -->
+        <div class="glass-panel p-6 rounded-2xl border border-brand-purple/30">
+            <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                <i class="fas fa-sliders-h text-brand-purple"></i> Painel de Controle
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Aporte Inicial -->
+                <div>
+                    <label class="block text-sm text-gray-400 mb-2">Aporte Inicial Mensal</label>
+                    <div class="flex items-center gap-3">
+                        <input type="range" min="400" max="2000" step="50" value="600" id="initialInvestmentSlider"
+                            oninput="document.getElementById('initialInvestmentValue').innerText = formatBRL(this.value); CONFIG.initialInvestment = parseFloat(this.value);"
+                            class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                        <span id="initialInvestmentValue" class="text-brand-blue font-bold text-sm w-24 text-right">R$
+                            600,00</span>
+                    </div>
+                </div>
+
+                <!-- Inflação de Aportes -->
+                <div>
+                    <label class="block text-sm text-gray-400 mb-2">Crescimento Anual do Aporte</label>
+                    <div class="flex items-center gap-3">
+                        <input type="range" min="5" max="15" step="1" value="10" id="inflationSlider"
+                            oninput="document.getElementById('inflationValue').innerText = this.value + '%'; CONFIG.inflationRate = parseFloat(this.value) / 100;"
+                            class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                        <span id="inflationValue" class="text-brand-green font-bold text-sm w-16 text-right">10%</span>
+                    </div>
+                </div>
+
+                <!-- Despesas Mensais -->
+                <div>
+                    <label class="block text-sm text-gray-400 mb-2">Suas Despesas Mensais (Meta de
+                        Independência)</label>
+                    <input type="number" min="1000" max="20000" step="100" value="3000" id="monthlyExpenses"
+                        oninput="CONFIG.monthlyExpenses = parseFloat(this.value)"
+                        class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono focus:outline-none focus:border-brand-yellow">
+                </div>
+            </div>
+
+            <div class="mt-4 p-3 bg-gray-900/50 rounded-lg border border-gray-700/50">
+                <p class="text-xs text-gray-400">
+                    <i class="fas fa-lightbulb text-brand-yellow mr-2"></i>
+                    <strong>Dica:</strong> Ajuste os controles e clique em <strong>Recalcular</strong> para simular
+                    diferentes perfis de investidor.
+                </p>
+            </div>
+        </div>
+
+        <!-- KPI Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Total Invested -->
+            <div class="glass-panel p-6 rounded-2xl border-l-4 border-brand-blue relative overflow-hidden group">
+                <div class="absolute right-[-20px] top-[-20px] opacity-10 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-wallet text-9xl"></i>
+                </div>
+                <h3 class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Patrimônio Final (15 Anos)</h3>
+                <p class="text-3xl font-bold mt-2" id="displayTotalInvested">R$ 0,00</p>
+                <p class="text-xs text-brand-blue mt-1">Saldo acumulado em 180 Meses</p>
+            </div>
+
+            <!-- Monthly Income -->
+            <div class="glass-panel p-6 rounded-2xl border-l-4 border-brand-green relative overflow-hidden group">
+                <div class="absolute right-[-20px] top-[-20px] opacity-10 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-money-bill-wave text-9xl"></i>
+                </div>
+                <h3 class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Renda Mensal (Final)</h3>
+                <p class="text-3xl font-bold mt-2 text-brand-green" id="displayMonthlyDividends">R$ 0,00</p>
+                <p class="text-xs text-green-400 mt-1">Isento de IR</p>
+            </div>
+
+            <!-- Strategy Info -->
+            <div class="glass-panel p-6 rounded-2xl border-l-4 border-brand-purple relative overflow-hidden group">
+                <div class="absolute right-[-20px] top-[-20px] opacity-10 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-chess-knight text-9xl"></i>
+                </div>
+                <h3 class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Estratégia Atual</h3>
+                <div class="mt-2 space-y-1 text-sm">
+                    <p><span class="text-red-400 font-bold">Fase 1 (A-5):</span> Yield (MXRF+VGHF+VGIA)</p>
+                    <p><span class="text-blue-400 font-bold">Fase 2 (A-15):</span> Blindagem (HGLG+VISC)</p>
+                    <p class="text-xs text-gray-500 mt-2">Dividendos crescem 4% ao ano (IGP-M)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Long Term Projections -->
+        <div id="projectionsContainer"></div>
+
+        <!-- Charts Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Main Growth Chart -->
+            <div class="lg:col-span-2 glass-panel p-6 rounded-2xl">
+                <h3 class="text-xl font-bold mb-6 text-gray-200">Evolução Patrimonial</h3>
+                <div class="h-64 sm:h-80 w-full">
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Allocation Donut -->
+            <div class="glass-panel p-6 rounded-2xl flex flex-col items-center justify-center">
+                <h3 class="text-xl font-bold mb-4 text-gray-200 align-self-start w-full">Alocação Final</h3>
+                <div class="h-64 w-full flex justify-center">
+                    <canvas id="allocationChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Timeline (Yearly Tabs) -->
+        <div class="glass-panel rounded-2xl overflow-hidden flex flex-col min-h-[600px]">
+            <!-- Tabs Header -->
+            <div class="p-4 border-b border-gray-700 bg-gray-800/50 flex flex-wrap gap-2 overflow-x-auto"
+                id="yearTabsHeader">
+                <!-- Javascript will inject tabs here -->
+            </div>
+
+            <!-- Tab Content -->
+            <div class="flex-1 p-6 bg-gray-900/30" id="monthsGrid">
+                <!-- Javascript will inject monthly cards here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Market Data Modal -->
+    <div id="marketDataModal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
+        <div
+            class="bg-gray-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-gray-700 shadow-2xl">
+            <div class="sticky top-0 bg-gray-900 p-6 border-b border-gray-700 flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                    <i class="fas fa-chart-line text-brand-blue"></i>
+                    <span id="modalTitle">Dados de Mercado</span>
+                </h2>
+                <button onclick="closeMarketDataModal()" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div id="modalContent" class="p-6">
+                <!-- Content will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Logic (Classic Mode) -->
+    <script src="js/config.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/simulation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/market-data.js"></script>
+</body>
+
+</html>

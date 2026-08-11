@@ -1,0 +1,17 @@
+node_modules
+.next
+dist
+build
+*.log
+.env
+.env.local
+.env.production
+.env.staging
+.DS_Store
+.vscode
+.idea
+coverage
+prisma/migrations/*/migration.sql.bak
+*.tsbuildinfo
+.turbo
+.pnpm-store

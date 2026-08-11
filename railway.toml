@@ -1,0 +1,28 @@
+# =============================================================================
+# Railway project config — Backend (NestJS)
+# =============================================================================
+# Root directory: apps/api
+# Build command: cd ../.. && pnpm install --frozen-lockfile && pnpm --filter api prisma:generate && pnpm --filter api build
+# Start command: cd ../.. && pnpm --filter api start
+# Health check: /health/ready
+#
+# Add-ons a provisionar no projeto Railway:
+#   - Postgres (pega DATABASE_URL e DIRECT_URL automaticamente)
+#   - Redis (pega REDIS_URL automaticamente)
+#
+# Environment Variables (configurar manualmente):
+#   DATABASE_URL            — automatico via Postgres add-on
+#   DIRECT_URL              — automatico
+#   REDIS_URL               — automatico via Redis add-on
+#   API_PORT                — 4000
+#   NODE_ENV                — production
+#   NEXTAUTH_SECRET         — mesmo do Vercel
+#   BRAPI_API_KEY           — sua chave
+#   TV_WEBHOOK_SECRET       — secreto HMAC
+#   ANTHROPIC_API_KEY       — opcional
+#   ANTHROPIC_MODEL         — claude-haiku-4-5-20251001
+#   TELEGRAM_BOT_TOKEN      — opcional
+#   TELEGRAM_CHAT_ID        — opcional
+#   SENTRY_DSN              — opcional
+#   APP_VERSION             — git sha
+#   CORS_ALLOWED_ORIGINS    — https://seudominio.vercel.app

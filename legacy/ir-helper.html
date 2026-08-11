@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaração IR - FIIs | Simulador de Investimentos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#3b82f6',
+                        'brand-green': '#10b981',
+                        'brand-yellow': '#fbbf24',
+                        'brand-red': '#ef4444',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .glass-card {
+                background: white;
+                border: 1px solid #ccc;
+            }
+        }
+    </style>
+</head>
+
+<body class="p-6">
+    <!-- Header -->
+    <div class="max-w-7xl mx-auto mb-8 no-print">
+        <div class="flex items-center justify-between">
+            <div>
+                <h1 class="text-4xl font-bold text-white mb-2">
+                    <i class="fas fa-file-invoice-dollar text-brand-yellow mr-3"></i>
+                    Declaração de Imposto de Renda
+                </h1>
+                <p class="text-gray-400">Auxiliar para declaração de FIIs no IRPF</p>
+            </div>
+            <a href="index.html"
+                class="px-6 py-3 bg-brand-blue hover:bg-blue-600 text-white rounded-lg transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Voltar ao Simulador
+            </a>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto space-y-6">
+        <!-- Year Selector -->
+        <div class="glass-card rounded-xl p-6 no-print">
+            <label class="text-gray-300 text-sm font-semibold mb-2 block">Selecione o Ano-Calendário:</label>
+            <select id="yearSelector"
+                class="w-full md:w-64 px-4 py-3 bg-gray-800 text-white rounded-lg border border-gray-700 focus:border-brand-blue focus:outline-none">
+                <!-- Will be populated by JS -->
+            </select>
+        </div>
+
+        <!-- Info Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Total Invested -->
+            <div class="glass-card rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-12 h-12 bg-brand-blue/20 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-wallet text-brand-blue text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase">Total Investido</p>
+                        <p class="text-2xl font-bold text-white" id="totalInvested">R$ 0,00</p>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500">Declarar em Bens e Direitos</p>
+            </div>
+
+            <!-- Total Dividends -->
+            <div class="glass-card rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-12 h-12 bg-brand-green/20 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-coins text-brand-green text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase">Dividendos Recebidos</p>
+                        <p class="text-2xl font-bold text-white" id="totalDividends">R$ 0,00</p>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500">Declarar em Rendimentos Isentos (linha 26)</p>
+            </div>
+
+            <!-- Tax Status -->
+            <div class="glass-card rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-12 h-12 bg-brand-yellow/20 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-shield-halved text-brand-yellow text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase">Status Fiscal</p>
+                        <p class="text-2xl font-bold text-brand-green">ISENTO</p>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500">Enquanto não vender, não paga IR!</p>
+            </div>
+        </div>
+
+        <!-- Detailed Report - Bens e Direitos -->
+        <div class="glass-card rounded-xl p-6">
+            <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                <i class="fas fa-building text-brand-blue"></i>
+                Bens e Direitos (Código 73)
+            </h2>
+            <p class="text-sm text-gray-400 mb-6">
+                Use estes dados para preencher a ficha "Bens e Direitos" do IRPF. Crie um item para cada FII que você
+                possui.
+            </p>
+
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-gray-700">
+                            <th class="text-left py-3 px-4 text-gray-400 font-semibold text-sm">FII</th>
+                            <th class="text-left py-3 px-4 text-gray-400 font-semibold text-sm">CNPJ</th>
+                            <th class="text-right py-3 px-4 text-gray-400 font-semibold text-sm">Cotas</th>
+                            <th class="text-right py-3 px-4 text-gray-400 font-semibold text-sm">Valor Ano Anterior</th>
+                            <th class="text-right py-3 px-4 text-gray-400 font-semibold text-sm">Valor Atual</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bensTable">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Detailed Report - Rendimentos Isentos -->
+        <div class="glass-card rounded-xl p-6">
+            <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                <i class="fas fa-hand-holding-dollar text-brand-green"></i>
+                Rendimentos Isentos e Não Tributáveis (Linha 26)
+            </h2>
+            <p class="text-sm text-gray-400 mb-6">
+                Total de dividendos recebidos no ano. Declarar na ficha "Rendimentos Isentos", linha 26 - "Outros".
+            </p>
+
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-gray-700">
+                            <th class="text-left py-3 px-4 text-gray-400 font-semibold text-sm">FII</th>
+                            <th class="text-right py-3 px-4 text-gray-400 font-semibold text-sm">Jan-Jun</th>
+                            <th class="text-right py-3 px-4 text-gray-400 font-semibold text-sm">Jul-Dez</th>
+                            <th class="text-right py-3 px-4 text-gray-400 font-semibold text-sm">Total Ano</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dividendsTable">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Step-by-Step Guide -->
+        <div class="glass-card rounded-xl p-6 no-print">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <i class="fas fa-list-check text-brand-yellow"></i>
+                Passo a Passo: Como Declarar
+            </h2>
+
+            <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold">1</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-2">Bens e Direitos</h3>
+                        <ul class="text-gray-300 text-sm space-y-2">
+                            <li>• Acesse a ficha <strong>"Bens e Direitos"</strong></li>
+                            <li>• Clique em <strong>"Novo"</strong></li>
+                            <li>• Código: <strong>73 - Fundo de Investimento Imobiliário</strong></li>
+                            <li>• Preencha o CNPJ e quantidade de cotas (use a tabela acima)</li>
+                            <li>• Situação 31/12/[ano anterior]: Valor investido até 31/12 do ano passado</li>
+                            <li>• Situação 31/12/[ano atual]: Valor total investido até 31/12 deste ano</li>
+                            <li>• Repita para cada FII que você possui</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 bg-brand-green rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold">2</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-2">Rendimentos Isentos</h3>
+                        <ul class="text-gray-300 text-sm space-y-2">
+                            <li>• Acesse <strong>"Rendimentos Isentos e Não Tributáveis"</strong></li>
+                            <li>• Linha <strong>26 - Outros</strong></li>
+                            <li>• Informe o valor total de dividendos recebidos no ano (veja tabela acima)</li>
+                            <li>• Descrição: "Dividendos de Fundos de Investimento Imobiliário"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 bg-brand-yellow rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold">3</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-2">Se Vendeu Cotas</h3>
+                        <ul class="text-gray-300 text-sm space-y-2">
+                            <li>• Vendas até R$ 20 mil/mês: <strong class="text-brand-green">ISENTO</strong></li>
+                            <li>• Vendas acima de R$ 20 mil/mês: <strong class="text-brand-red">20% sobre o
+                                    lucro</strong></li>
+                            <li>• Emitir DARF (código 6015) até último dia útil do mês seguinte</li>
+                            <li>• Declarar em "Renda Variável - Operações Comuns"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex gap-4 no-print">
+            <button onclick="window.print()"
+                class="flex-1 px-6 py-4 bg-brand-blue hover:bg-blue-600 text-white rounded-lg font-semibold transition-colors">
+                <i class="fas fa-print mr-2"></i>
+                Imprimir Relatório
+            </button>
+            <button onclick="exportToCSV()"
+                class="flex-1 px-6 py-4 bg-brand-green hover:bg-green-600 text-white rounded-lg font-semibold transition-colors">
+                <i class="fas fa-file-csv mr-2"></i>
+                Exportar CSV
+            </button>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/ir-helper.js"></script>
+</body>
+
+</html>

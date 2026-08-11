@@ -1,0 +1,13 @@
+{
+  "tasks": [
+    {
+      "id": "59230c7b",
+      "cron": "0 9 1 1 *",
+      "prompt": "Conversar com o usuário Lucas sobre como aumentar a renda dele para conseguir investir R$ 1.500/mês (alavancar do aporte atual de R$ 600/mês). Opções a explorar:\n1. Renda extra via freelance (desenvolvimento, design, conteúdo)\n2. Venda de produtos (digital, físico)\n3. Criação de conteúdo (YouTube, blog, newsletter)\n4. Promoção / mudança de emprego\n5. Corte de despesas para liberar capacidade de aporte\n\nContexto: o usuário está construindo uma plataforma local de investimentos em C:\\Users\\Lucas\\Desktop\\INVESTIMENTOS e segue uma estratégia educacional de 6 meses baseada em livros (Graham, Damodaran, Perri, etc). A meta declarada é triplicar o aporte mensal.\n\nApresentar opções, pedir input sobre o que faz sentido para o perfil dele, e ajudar a montar um plano concreto.",
+      "createdAt": 1786448428881,
+      "createdBySessionId": "0774b968-bfab-4296-b67f-a69148a6abde",
+      "createdByPid": 28148,
+      "createdByProcStart": "134309191278558817"
+    }
+  ]
+}
