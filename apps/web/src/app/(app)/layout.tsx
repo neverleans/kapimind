@@ -26,8 +26,10 @@ export default async function AppLayout({ children }: { children: React.ReactNod
           <nav className="hidden md:flex gap-6 text-sm text-gray-400">
             <Link href="/dashboard" className="hover:text-white">Dashboard</Link>
             <Link href="/portfolio" className="hover:text-white">Portfólio</Link>
+            <Link href="/portfolio/strategy" className="hover:text-white">Estratégia</Link>
             <Link href="/simulator" className="hover:text-white">Simulador</Link>
             <Link href="/calculators" className="hover:text-white">Calculadoras</Link>
+            <Link href="/calculators/robos" className="hover:text-white">Robos</Link>
             <Link href="/explorer" className="hover:text-white">FIIs</Link>
             <Link href="/alerts" className="hover:text-white">Alertas</Link>
             <Link href="/roadmap" className="hover:text-white">Roadmap</Link>

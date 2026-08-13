@@ -1,6 +1,12 @@
-# Plataforma de Investimentos
+# Kapimind — Mente do seu Capital
 
-Plataforma pessoal de investimentos: portfólio, simulador, alertas 24/7 e roadmap educacional.
+Plataforma pessoal de investimentos com IA. Roadmap educacional, alertas 24/7, calculadoras, simulador, IR automático. Atualmente single-user (Lucas); projetada para escalar multi-tenant no futuro.
+
+**Tagline:** "Kapimind — a mente do seu capital."
+
+## 🎯 Origem do Nome
+
+`kapimind` = **kapi** (do Alemão/Sueco para "capital") + **mind** (inteligência, IA). Lê-se como "mente do capital". Ancoragem 100% em IA + Investimentos. Domínio `.com`, `.com.br`, npm package, GitHub org — todos livres (ago/2026).
 
 ## 🏗️ Stack
 

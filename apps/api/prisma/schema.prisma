@@ -227,3 +227,46 @@ model MacroSnapshot {
   @@index([month])
   @@index([ticker])
 }
+
+// =============================================================================
+// FASE 9: SISTEMA ADAPTATIVO - Strategy + Backtest
+// =============================================================================
+
+model Strategy {
+  id        String       @id @default(cuid())
+  userId    String
+  name      String
+  type      StrategyType
+  config    Json         // { allocation, tickers, rebalanceThreshold, rebalanceFrequency }
+  enabled   Boolean      @default(true)
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+
+  backtests Backtest[]
+
+  @@index([userId])
+  @@index([enabled])
+}
+
+enum StrategyType {
+  PERMANENT_PORTFOLIO
+  DUAL_MOMENTUM
+  RISK_PARITY
+  CUSTOM
+}
+
+model Backtest {
+  id                  String   @id @default(cuid())
+  strategyId          String
+  strategy            Strategy @relation(fields: [strategyId], references: [id], onDelete: Cascade)
+  startDate           DateTime
+  endDate             DateTime
+  monthlyContribution Float
+  metrics             Json     // { cagr, sharpe, maxDrawdown, volatility, totalReturn, ... }
+  monthlyData         Json     // BacktestPoint[] serializado
+  durationMs          Int
+  executedAt          DateTime @default(now())
+
+  @@index([strategyId])
+  @@index([executedAt])
+}

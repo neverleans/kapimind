@@ -1,7 +1,7 @@
 {
-  "name": "investimentos",
+  "name": "kapimind",
   "version": "1.0.0",
-  "description": "Plataforma de investimentos pessoais — Next.js 15 + NestJS 10 + PostgreSQL 17",
+  "description": "Kapimind — Plataforma pessoal de investimentos com IA. Mind + Capital. Roadmap educacional, alertas 24/7, calculadoras, simulador, IR automático.",
   "private": true,
   "scripts": {
     "dev": "pnpm --parallel --filter \"./apps/*\" dev",

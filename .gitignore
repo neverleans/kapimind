@@ -15,3 +15,9 @@ prisma/migrations/*/migration.sql.bak
 *.tsbuildinfo
 .turbo
 .pnpm-store
+# Tests build artifacts
+**/*.js.map
+**/*.js
+!apps/api/jest.config.js
+!apps/web/src/**/*.js
+!apps/api/nest-cli.js

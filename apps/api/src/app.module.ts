@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ThrottlerModule } from '@nestjs/throttler';
+import { ScheduleModule } from '@nestjs/schedule';
 import { HealthModule } from './modules/health/health.module';
 import { PortfolioModule } from './modules/portfolio/portfolio.module';
 import { AlertsModule } from './modules/alerts/alerts.module';
@@ -11,9 +12,10 @@ import { TelegramModule } from './modules/telegram/telegram.module';
 import { MacroModule } from './modules/macro/macro.module';
 import { IrModule } from './modules/ir/ir.module';
 import { AdminModule } from './admin/admin.module';
+import { AdaptiveSuggestionWorker } from './workers/adaptive-suggestion.worker';
+import { DailyInsightsWorker } from './workers/daily-insights.worker';
 import { PrismaService } from './lib/prisma.service';
-import { RedisService } from './lib/redis.service';
-import { TelegramService } from './lib/telegram.service';
+import { BrapiService } from './lib/brapi.service';
 
 @Module({
   imports: [
@@ -25,6 +27,7 @@ import { TelegramService } from './lib/telegram.service';
       { name: 'short', ttl: 1000, limit: 10 },
       { name: 'long', ttl: 60_000, limit: 100 },
     ]),
+    ScheduleModule.forRoot(),
     HealthModule,
     PortfolioModule,
     AlertsModule,
@@ -36,7 +39,12 @@ import { TelegramService } from './lib/telegram.service';
     IrModule,
     AdminModule,
   ],
-  providers: [PrismaService, RedisService, TelegramService],
-  exports: [PrismaService, RedisService, TelegramService],
+  providers: [
+    PrismaService,
+    BrapiService,
+    AdaptiveSuggestionWorker,
+    DailyInsightsWorker,
+  ],
+  exports: [PrismaService, BrapiService],
 })
 export class AppModule {}
