@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { OnboardingTour } from '@/components/onboarding-tour';
+import { CommandMenu } from '@/components/CommandMenu';
 
 export const metadata: Metadata = {
   title: 'Investimentos — Plano de aceleração',
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-sans antialiased">
         {children}
         <Toaster />
+        <CommandMenu />
       </body>
     </html>
   );
