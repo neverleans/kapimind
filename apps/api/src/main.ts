@@ -4,10 +4,12 @@ import { AppModule } from './app.module';
 import { Logger } from '@nestjs/common';
 import { initSentry, flushSentry } from './lib/sentry';
 import { AllExceptionsFilter } from './lib/all-exceptions.filter';
+import { initTracing, shutdownTracing } from './lib/tracing';
 
 async function bootstrap() {
-  // Sentry deve subir antes de qualquer coisa
+  // Sentry + tracing devem subir antes de qualquer coisa
   initSentry();
+  initTracing();
 
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
@@ -32,6 +34,7 @@ async function bootstrap() {
     Logger.log(`Received ${signal}. Starting graceful shutdown...`, 'Bootstrap');
     await app.close();
     await flushSentry();
+    await shutdownTracing();
     Logger.log('Shutdown complete. Bye!', 'Bootstrap');
     process.exit(0);
   };

@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { ScheduleModule } from '@nestjs/schedule';
+import { LoggerModule } from 'nestjs-pino';
 import { HealthModule } from './modules/health/health.module';
 import { PortfolioModule } from './modules/portfolio/portfolio.module';
 import { AlertsModule } from './modules/alerts/alerts.module';
@@ -16,9 +17,11 @@ import { AdaptiveSuggestionWorker } from './workers/adaptive-suggestion.worker';
 import { DailyInsightsWorker } from './workers/daily-insights.worker';
 import { PrismaService } from './lib/prisma.service';
 import { BrapiService } from './lib/brapi.service';
+import { buildPinoOptions } from './lib/pino.config';
 
 @Module({
   imports: [
+    LoggerModule.forRoot(buildPinoOptions({ serviceName: 'kapimind-api' })),
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: ['.env.local', '.env', '../../.env'],
