@@ -12,11 +12,12 @@ export function initSentry(): void {
   if (!process.env.SENTRY_DSN) return;
 
   Sentry.init({
-    dsn: process.env.SENTRY_DSN,
+    // Cast necessário pois tipos do @sentry/node são estritos
+    dsn: process.env.SENTRY_DSN as string,
     tracesSampleRate: 0.1,
     environment: process.env.NODE_ENV ?? 'development',
     release: process.env.APP_VERSION ?? 'dev',
-  });
+  } as Parameters<typeof Sentry.init>[0]);
   initialized = true;
 }
 

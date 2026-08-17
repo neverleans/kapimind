@@ -3,6 +3,27 @@
 @tailwind utilities;
 
 @layer base {
+  /* WCAG 2.4.7 — Focus Visible. Nunca remover outlines (a11y). */
+  *:focus {
+    outline: none;
+  }
+  *:focus-visible {
+    outline: 2px solid #3b82f6; /* ring-brand-blue */
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
+  /* Para elementos interativos: ring mais visível */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [role='button']:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+  }
+
   :root {
     --background: 222 47% 11%;
     --foreground: 210 40% 98%;
