@@ -1,15 +1,11 @@
 import { defineConfig } from 'vitest/config';
-import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [react()],
   test: {
-    environment: 'jsdom',
+    environment: 'node',
     globals: true,
-    server: {
-      deps: {
-        inline: [/react/, /react-dom/],
-      },
-    },
+  },
+  esbuild: {
+    target: 'node18',
   },
 });
