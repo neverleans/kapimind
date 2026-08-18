@@ -10,12 +10,14 @@
 import { randomUUID } from 'crypto';
 import { Logger as NestPinoLogger, Params as PinoParams } from 'nestjs-pino';
 import type { ArgumentsHost, ExecutionContext } from '@nestjs/common';
+import { getContext } from './request-context';
 
 /**
  * Logger Pino + OpenTelemetry para NestJS.
  * Substitui logger default por pino (10x mais rapido, structured JSON).
  *
  * Auto-gera correlation IDs via header `x-correlation-id` ou UUID por request.
+ * Propaga context via AsyncLocalStorage (request-context.ts).
  *
  * Referencia: https://getpino.io / https://github.com/iamolegga/nestjs-pino
  */
@@ -55,6 +57,11 @@ export function buildPinoOptions(config: PinoConfig = {}): PinoParams {
         if (err || res?.statusCode >= 500) return 'error';
         if (res?.statusCode >= 400) return 'warn';
         return 'info';
+      },
+      // Injeta contexto do AsyncLocalStorage
+      mixin: () => {
+        const ctx = getContext();
+        return ctx ? { reqId: ctx.reqId, userId: ctx.userId } : {};
       },
       serializers: {
         req: (req: any) => ({
