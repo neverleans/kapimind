@@ -1,13 +1,9 @@
 import type { NextConfig } from 'next';
 import { withSentryConfig } from '@sentry/nextjs';
 
-/**
- * Security headers.
- * Aplicados a todas as rotas.
- */
 const baseHeaders = {
-  'X-Frame-Options': 'SAMEORIGIN', // Clickjacking
-  'X-Content-Type-Options': 'nosniff', // MIME sniffing
+  'X-Frame-Options': 'SAMEORIGIN',
+  'X-Content-Type-Options': 'nosniff',
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
   'X-XSS-Protection': '1; mode=block',
@@ -36,9 +32,5 @@ const nextConfig: NextConfig = {
 };
 
 export default process.env.SENTRY_DSN
-  ? withSentryConfig(nextConfig, {
-      silent: true,
-      hideSourceMaps: true,
-      disableLogger: true,
-    })
+  ? withSentryConfig(nextConfig, { silent: true, hideSourceMaps: true, disableLogger: true })
   : nextConfig;
